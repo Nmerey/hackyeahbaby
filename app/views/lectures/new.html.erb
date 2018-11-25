@@ -1,0 +1,48 @@
+<title>New Lecture</title>
+<%= stylesheet_link_tag "entry_page" %>
+
+<style>
+
+  body {
+    background-image: none;
+    height: 100vh;
+  }
+
+
+</style>
+
+
+
+<div class="login-page">
+  
+  <div class="form animated bounceIn">
+
+    <div class="container">
+
+      <%= form_for @lecture do |s| %>
+
+      <div class="field">
+    <%= s.text_field :name ,:class => "text-center" ,placeholder: "Name"%>
+      </div>
+
+      <div class="field">
+    <%= s.text_field :subject_name,:class => "text-center",placeholder: "Subject Name" %>
+      </div>
+
+      <div class="field">
+    <%= s.text_field :time,:class => "text-center",placeholder: "Time" %>
+      </div>
+
+
+
+      <button type="submit">
+        Submit
+      </button>
+
+      <% end %>
+    
+     </div>
+    
+  </div>
+</div>
+

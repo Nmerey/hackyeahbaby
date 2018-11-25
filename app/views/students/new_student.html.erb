@@ -1,0 +1,45 @@
+<title>Register Lecture</title>
+<style type="text/css">
+	.mart{
+		margin-top: 15vh;
+	}
+	h1,h2{
+		text-align: center;
+		color: white;
+		font-family: Tajawal;
+		font-size: 6vh;
+	}
+</style>
+
+<div class="container mt-5">
+	<h1>Hello Student</h1>
+
+	<table class="animated flipInX table table-striped table-dark">
+	<thead>
+		<tr>
+			<!-- <th scope="col">Id</th> -->
+			<th scope="col">Name</th>
+			<th scope="col">Subject</th>
+			<th scope="col">Time</th>
+			<th scope="col">Sign-Up</th>
+
+		</tr>
+		
+	</thead>
+	<tbody>
+<% @list_lecture.each do |lecture| %>
+		<tr>
+			<!-- <th scope="row"></th> -->
+			<td><%=lecture.name%></td>
+			<td><%= lecture.subject_name%></td>
+			<td><%= lecture.time %></td>
+			<td><a href="<%= lecture_sign_up_path(lecture.id) %>">Sign Up</a><br></td>
+		</tr>
+<% end %>
+		
+	</tbody>
+	
+</table>
+	
+</div>
+
